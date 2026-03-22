@@ -17,8 +17,18 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800/80 dark:to-slate-900"
+      className="relative min-h-screen flex items-center overflow-hidden dark:bg-slate-900"
     >
+      <video
+        autoPlay={true}
+        loop={true}
+        muted={true}
+        playsInline={true}
+        className="absolute inset-0 w-full h-full object-cover opacity-30 dark:opacity-40 pointer-events-none"
+      >
+        <source src={`${import.meta.env.BASE_URL}travelicons.mp4`} type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-50/90 dark:to-slate-900/90 pointer-events-none" />
       {/* Background grid */}
       <div
         className="absolute inset-0 opacity-40 dark:opacity-20"
